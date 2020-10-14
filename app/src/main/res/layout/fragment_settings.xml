@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/SettingsFragmentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingsFragment"
+    android:background="@drawable/setting_image">
+
+    <TextView
+        android:id="@+id/textViewSettings"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/settings_nav"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxRemoveWind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRemoveWind"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/remove"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxRemoveForecast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSettings" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRemoveForecast"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/remove_forecast"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxDarkTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxRemoveWind" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDarkTheme"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/dark_theme"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAddMoisture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxRemoveForecast" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAddMoisture"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/add_moisture"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAddPressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxDarkTheme" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAddPressure"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/add_pressure"
+        app:layout_constraintBottom_toTopOf="@id/buttonSaveSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxAddMoisture" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/ButtonStyle"
+        android:id="@+id/buttonSaveSettings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/save_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAddPressure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

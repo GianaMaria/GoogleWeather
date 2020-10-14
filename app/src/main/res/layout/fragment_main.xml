@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_image"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/TableLayout"
+        style="@style/TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewCityMain"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city" />
+
+            <EditText
+                android:id="@+id/textCity"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewTemperMain"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature" />
+
+            <EditText
+                android:id="@+id/textTemper"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewWindMain"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind_speed" />
+
+            <EditText
+                android:id="@+id/textWind"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewForecastMain"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forecast" />
+
+            <EditText
+                android:id="@+id/textForecast"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName"
+                android:text="" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRefresh"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/refresh"
+        app:layout_constraintBottom_toTopOf="@id/buttonForecast5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonForecast5"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/_5_days_forecast"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRefresh" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLocation"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/identify_by_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonForecast5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

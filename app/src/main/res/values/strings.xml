@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!--    Navigation drawer-->
+    <string name="navigation_header">Navigation header</string>
+    <string name="mari_dvoyeryadkina_list_ru">mari.dvoyeryadkina@list.ru</string>
+
+    <!--    Settings-->
+    <string name="settings_nav">Settings</string>
+    <string name="remove">Remove wind spd</string>
+    <string name="remove_forecast">Remove forecast</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="add_moisture">Add moisture</string>
+    <string name="add_pressure">Add pressure</string>
+    <string name="save_settings">Save settings</string>
+
+    <!--Main-->
+    <string name="city">City</string>
+    <string name="temperature">Temperature</string>
+    <string name="refresh">Refresh</string>
+    <string name="forecast">Forecast</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="_5_days_forecast">5 days forecast</string>
+
+    <!--    FragmentDialog-->
+    <string name="title_dialog">Error</string>
+    <string name="positive_button">Ok</string>
+    <string name="message_dialog">The request failed. Check the correctness of the typed city</string>
+
+    <!--    Main menu-->
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+
+    <!--    Drawer menu-->
+    <string name="home">Home</string>
+    <string name="communicate">Сommunicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="history_nav">History request</string>
+    <string name="cities_nav">Cities</string>
+    <string name="clear">Clear</string>
+    <string name="identify_by_location">identify by location</string>
+    <string name="sign_out">Sign out</string>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item>Abinsk</item>
+        <item>Alexandrov</item>
+        <item>Azov</item>
+        <item>Blagoveshchensk</item>
+        <item>Belogorsk</item>
+        <item>Irkutsk</item>
+        <item>Krasnodar</item>
+        <item>Moscow</item>
+        <item>Novosibirsk</item>
+        <item>Orenburg</item>
+        <item>Okha</item>
+        <item>St.Petersburg</item>
+        <item>Saratov</item>
+        <item>Samara</item>
+        <item>Voronezh</item>
+        <item>Vladivostok</item>
+
+    </string-array>
+</resources>

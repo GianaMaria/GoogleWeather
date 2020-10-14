@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        style="@style/TextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/date_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/temperature_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/forecast_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pressure_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/Humidity_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/windspd_history"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+</TableLayout>
