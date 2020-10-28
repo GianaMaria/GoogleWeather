@@ -67,19 +67,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private ArrayList<City> cities = new ArrayList<City>();
 
-    // Используется, чтобы определить результат Activity регистрации через
-    // Google
     private static final int RC_SIGN_IN = 40404;
     private static final String TAG = "GoogleAuth";
 
-    // Клиент для регистрации пользователя через Google
     private GoogleSignInClient googleSignInClient;
 
-    // Кнопка регистрации через Google
     private com.google.android.gms.common.SignInButton buttonSignIn;
-    // Кнопка выхода из Google
     private MaterialButton buttonSingOut;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,18 +139,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         initNotificationChannel();
 
-
-        // Конфигурация запроса на регистрацию пользователя, чтобы получить
-        // идентификатор пользователя, его почту и основной профайл
-        // (регулируется параметром)
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
-        // Получаем клиента для регистрации и данные по клиенту
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        // Кнопка регистрации пользователя
         buttonSignIn = findViewById(R.id.sign_in_button);
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
                                             @Override
@@ -166,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                         }
         );
 
-        // Кнопка выхода
+
         buttonSingOut = findViewById(R.id.sing_out_button);
         buttonSingOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -299,7 +287,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-
     // Вызов диалога с билдером
     public void onClickDialogBuilder(View view) {
         dialogBuilderFragment.show(getSupportFragmentManager(), "dialogBuilder");
@@ -325,12 +312,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStart() {
         super.onStart();
         enableSign();
-        // Проверим, входил ли пользователь в это приложение через Google
+
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
-            // Пользователь уже входил, сделаем кнопку недоступной
+
             disableSign();
-            // Обновим почтовый адрес этого пользователя и выведем его на экран
             updateUI(account.getEmail());
         }
     }
@@ -341,8 +327,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {
-            // Когда сюда возвращается Task, результаты аутентификафии уже
-            // готовы.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
@@ -372,14 +356,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            // Регистрация прошла успешно
             disableSign();
             updateUI(account.getEmail());
         } catch (ApiException e) {
-            // The ApiException status code indicates the detailed failure
-            // reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+            Log.w(TAG, "signInResult:failed code=" + e);
         }
     }
 
